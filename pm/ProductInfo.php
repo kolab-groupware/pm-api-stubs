@@ -39,6 +39,8 @@ class pm_ProductInfo
 
     const VERSION_WINDOWS_2016 = '10.0';
 
+    const VERSION_WINDOWS_2019 = '10.0.1809';
+
     const VIRT_NONE = 'none';
 
     const VIRT_VZ = 'vz';
@@ -102,6 +104,14 @@ class pm_ProductInfo
     public static function isWindows() { }
 
     /**
+     * Get product HWID
+     *
+     * @return string
+     * @since 18.0.23
+     */
+    public static function getHWID() { }
+
+    /**
      * Retrieve OS name
      *
      * @return string|null
@@ -122,6 +132,7 @@ class pm_ProductInfo
      *
      * @return string|null
      * @since 17.0
+     * @see pm_ProductInfo::getOsVersion For Windows version constants matching
      */
     public static function getOsShortVersion() { }
 

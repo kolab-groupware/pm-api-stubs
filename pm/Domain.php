@@ -210,12 +210,20 @@ class pm_Domain
     public function getCoreLimit($name) { }
 
     /**
-     * Check if domain has web hosting configured
+     * Check if domain has physical hosting configured
      *
      * @return bool
      * @since 17.0
      */
     public function hasHosting() { }
+
+    /**
+     * Check if domain has forwarding hosting configured
+     *
+     * @return bool
+     * @since 18.0.26
+     */
+    public function hasForwarding() { }
 
     /**
      * Retrieve domain home path
@@ -281,5 +289,23 @@ class pm_Domain
      * @since 18.0
      */
     public function getScreenshotUrl(string $path = '/', array $options = []) { }
+
+    /**
+     * Check if domain has SSL support for web hosting
+     *
+     * @return bool
+     * @throws pm_Exception
+     * @since 18.0.24
+     */
+    public function hasSsl() { }
+
+    /**
+     * Check if domain has redirect from HTTP to HTTPS
+     *
+     * @return bool
+     * @throws pm_Exception
+     * @since 18.0.24
+     */
+    public function hasSslRedirect() { }
 
 }
